@@ -21,6 +21,9 @@ const randomNumber = () => {
 };
 
 function checkInput(input) {
+  if (answer !== 4) {
+    return;
+  }
   if (input.length !== 4) {
     return alert("4자리 숫자를 입력해주세요");
   }
