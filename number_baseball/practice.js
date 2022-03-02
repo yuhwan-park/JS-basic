@@ -21,7 +21,7 @@ const randomNumber = () => {
 };
 
 function checkInput(input) {
-  if (answer !== 4) {
+  if (answer.length !== 4) {
     return;
   }
   if (input.length !== 4) {
