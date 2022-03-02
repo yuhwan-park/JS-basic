@@ -3,10 +3,12 @@ const $input = document.querySelector("input");
 const $log = document.getElementById("log");
 const $start = document.getElementById("start");
 const $span = document.querySelector("span");
-const number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+let number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 let answer = [];
 let tries = [];
 const randomNumber = () => {
+  answer = [];
+  number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
   for (i = 0; i < 4; i++) {
     const index = Math.floor(Math.random() * number.length);
     answer.push(number[index]);
@@ -35,21 +37,19 @@ function onSubmit(event) {
   event.preventDefault();
   const value = $input.value;
   $input.value = "";
-  if (!checkInput(value) || answer.length < 5) {
+  if (!checkInput(value) || answer.length !== 4) {
     return;
   }
   if (answer.join("") === value) {
     $start.textContent = "재시작";
     answer = [];
     $span.textContent = "축하합니다! 한 게임 더!";
-    $form.removeEventListener("submit", onSubmit);
     return alert(`${value}!! 정답입니다!!`);
   }
   if (tries.length >= 9) {
     $start.textContent = "재시작";
     answer = [];
     $span.textContent = "아깝네요! 다시 한번 도전해봐요!";
-    $form.removeEventListener("submit", onSubmit);
     return alert(`패배하였습니다. 정답은 ${answer.join("")} 입니다.`);
   }
   let strike = 0;
