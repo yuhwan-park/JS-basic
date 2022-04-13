@@ -101,17 +101,6 @@
   grid-column-start: 19;
   grid-column-end: 20;
 }
-
-.dropdown {
-  grid-column-start: 20;
-  grid-column-end: 21;
-}
-.dropdown div img {
-  width: 40px;
-  margin-top: 10px;
-  margin-left: 20px;
-}
-
 #video_container {
   display: flex;
   justify-content: center;
@@ -133,7 +122,7 @@
 .title {
   padding-top: 20px;
   margin-bottom: 20px;
-  border-top: 2px solid lightgray;
+  border-top: 1px solid lightgray;
   font-size: 24px;
   display: block;
 }
@@ -155,9 +144,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 30px 0;
-  border-top: 2px solid lightgray;
-  border-bottom: 2px solid lightgray;
+  margin-top: 30px;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
   padding: 8px 12px;
 }
 
@@ -299,73 +288,6 @@
 .offcanvas a:hover {
   background-color: #eeeeee;
 }
-
-.slide-Wrap {
-  position: relative;
-  margin: 20px auto;
-  overflow: hidden;
-  max-width: 1000px;
-}
-.slide-Wrap img {
-  vertical-align: middle;
-}
-.mySlide {
-  display: none;
-}
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  font-weight: bold;
-  font-size: 30px;
-}
-.next {
-  right: 0;
-}
-.dotWrapper {
-  position: absolute;
-  top: 90%;
-  left: 44%;
-}
-.dot {
-  cursor: pointer;
-  transition: color 0.6s ease;
-  color: #a7c0cd;
-  margin: 10px;
-}
-.active,
-.dot:hover {
-  color: #4b636e;
-}
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-@keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-h3 {
-  text-align: center;
-  font-size: 60px;
-  font-family: 'Do Hyeon', sans-serif;
-}
-#drag-drop-container {
-  text-align: center;
-}
-#drag-drop-container div p span {
-  font-size: 40px;
-  font-family: 'Do Hyeon', sans-serif;
-  margin-left: 10px;
-}
 @media screen and (max-width: 800px) {
   .searchBtn {
     display: none;
@@ -373,4 +295,23 @@ h3 {
   .todo-container {
     display: none;
   }
+}
+
+.article_box {
+  background-color:#f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+article {
+  text-align: center;
+  width: 600px;
+  margin: 0 auto;
+  height: 1100px;
+}
+article h2 {
+  padding: 20px;
+}
+article p {
+  padding: 30px;
 }
